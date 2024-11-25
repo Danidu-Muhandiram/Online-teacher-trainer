@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-size: 18px;
+    /*margin: 10px;
+    padding: 5px;
+    height: 100vh;*/
+    background: url(danidu_src/backgroundv2.png);
+}
+
+.course-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /*background-color: whitesmoke;*/
+    column-gap: 20px;
+    row-gap: 10px;
+    margin: 20px;
+    margin-top: 60px;
+    padding: 5px;
+}
+
+
+h3 {
+    font-size: 35px;
+    text-align: center;
+    padding-bottom: 15px;
+    line-height: 30px;
+}
+
+.coursecontent {
+    margin-bottom: 35px;
+    padding: 10px;
+    box-shadow: -10px 20px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    line-height: 24px;
+    background-color: whitesmoke;
+}
+
+.update-btn {
+    border: none;
+    width: 50px;
+    background-color: rgb(23, 194, 23);
+    margin-bottom: 3px;
+    padding: 5px;
+    border-radius: 3px;
+    color: white;
+}
+
+.delete-btn {
+    border: none;
+    background-color: rgb(228, 29, 29);
+    padding: 5px;
+    border-radius: 3px;
+    color: white;
+}
+
+.buy-btn {
+    float: right;
+    border: none;
+    background-color: rgb(25, 25, 216);
+    padding: 5px;
+    border-radius: 3px;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.02);
+}

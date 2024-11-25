@@ -1,0 +1,55 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(images/Study.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    background: transparent;
+    backdrop-filter: blur(6px);
+    width: 350px;
+    height: 350px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.container h2 {
+    font-size: 25px;
+}
+
+.input-field {
+    position: relative;
+}
+
+.input-field input {
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    margin: 12px;
+    border: 2px solid black;
+    width: 280px;
+    height: 3px;
+    padding: 20px 40px 20px 20px;
+}
+
+.login {
+    background-color: #18185c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    width: 200px;
+    height: 30px;
+}
+
+.register {
+    text-decoration: none;
+}

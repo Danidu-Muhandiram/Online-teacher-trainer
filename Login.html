@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Log in</title>
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome</h2>
+        <form action="logindatainsert.php" method = "POST">
+            <div class="input-field">
+                <input type="email/text" name="logemail" placeholder="Email or Username" required>
+            </div>
+            <div class="input-field">
+                <input type="password" name="logpassword" placeholder="Password" required>
+            </div>
+            <button type="submit" class="login">Login</button>
+            <p>Don't have an account? <a class="register" href="">Register</a></p>
+        </form>
+    </div>
+</body>
+</html>

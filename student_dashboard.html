@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>dashboard</title>
+        <link rel="stylesheet" href="student_dashboard .css">
+    </head>
+
+    <body>
+
+       <!--Navigation Bar Html Codes-->
+
+
+
+
+
+    <div class="dashboard">
+        <div class="welcome-profile-section">
+         
+			<div class="welcome-section">
+				<h2>Welcome back, <br> <span id="student-name">Ashan!</span></h2>
+				<p id="bio-paragraph">Hello, I'm <span id="bio-first-name">Ashan</span> <span id="bio-last-name">Silva</span>. I teach <span id="bio-subjects">Math</span>, and you can contact me via <span id="bio-email">ashan.silva@example.com</span>.</p>
+			</div>
+
+
+			<div class="profile-password-section">
+				<div class="profile-update">
+					<h3>Update your profile</h3>
+					<form id="profile-update-form">
+						<input type="text" id="first-name" placeholder="First Name">
+						<input type="text" id="last-name" placeholder="Last Name">
+						<input type="text" id="subjects" placeholder="Subjects">
+						<input type="email" id="email" placeholder="E-mail">
+						<button type="submit">Update</button>
+					</form>
+				</div>
+					<!-- Change Password-->
+					<div class="password-change">
+						<h3>Change your password</h3>
+						<form>
+							<input type="password" placeholder="Current Password" required>
+							<input type="password" placeholder="New Password" required>
+							<input type="password" placeholder="Confirm Password" required>
+							<button type="submit">Change Password</button>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<!-- Courses Section -->
+					<div class="courses-section">
+						<h2>Continue Your Courses and Keep Growing.</h2>
+						<div class="courses-container">
+					   <div class="coursebox">
+						<h3>Technology in Teaching</h3>
+						<p>Discover how to integrate modern technology into your classroom to enhance learning experiences.</p>
+						<a href="#" class="continue-learning">Continue Learning <span class="arrow">→</span></a>
+						<img src="1.jpg" alt="Course Image">
+					</div>
+					<div class="coursebox">
+						<h3>Classroom Management</h3>
+						<p>Learn effective strategies to manage classroom environments and foster positive student interactions.</p>
+						<a href="#" class="continue-learning">Continue Learning <span class="arrow">→</span></a>
+						<img src="2.jpg" alt="Course Image">
+					</div>
+					<div class="coursebox">
+						<h3>Curriculum Development</h3>
+						<p>Dive into the essentials of designing curricula that meet the educational needs of diverse learners.</p>
+						<a href="#" class="continue-learning">Continue Learning <span class="arrow">→</span></a>
+						<img src="3.jpg" alt="Course Image">
+					</div>
+					<div class="coursebox">
+						<h3>Introduction to Education</h3>
+						<p>Explore the foundational principles of education and teaching methodologies designed for aspiring educators.</p>
+						<a href="#" class="continue-learning">Continue Learning <span class="arrow">→</span></a>
+						<img src="4.jpg" alt="Course Image">
+					</div>
+					<div class="coursebox">
+						<h3>Professional Development for Teachers</h3>
+						<p>Improve your teaching skills through ongoing professional development and best practices in education.</p>
+						<a href="#" class="continue-learning">Continue Learning <span class="arrow">→</span></a>
+						<img src="5.jpg" alt="Course Image">
+					</div>
+					<div class="coursebox">
+						<h3>Educational Psychology</h3>
+						<p>Understand the psychological principles that impact learning, motivation, and student behavior in schools.</p>
+						<a href="#" class="continue-learning">Continue Learning <span class="arrow">→</span></a>
+						<img src="6.jpg" alt="Course Image">
+					</div>
+
+				</div>
+        </div>
+    </div>
+
+
+
+        <!--Footer Html Codes-->
+ 
+ 
+ 
+ 
+
+		<script>
+    
+    document.getElementById('profile-update-form').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+
+        
+        const firstName = document.getElementById('first-name').value;
+        const lastName = document.getElementById('last-name').value;
+        const subjects = document.getElementById('subjects').value;
+        const email = document.getElementById('email').value;
+
+        
+        if (firstName) {
+            document.getElementById('bio-first-name').textContent = firstName;
+        }
+        if (lastName) {
+            document.getElementById('bio-last-name').textContent = lastName;
+        }
+        if (subjects) {
+            document.getElementById('bio-subjects').textContent = subjects;
+        }
+        if (email) {
+            document.getElementById('bio-email').textContent = email;
+        }
+
+        
+        alert('Profile updated successfully!');
+
+        document.getElementById('profile-update-form').reset();
+    });
+</script>
+		
+    </body>
+
+</html>

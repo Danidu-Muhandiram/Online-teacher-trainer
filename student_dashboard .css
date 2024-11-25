@@ -1,0 +1,197 @@
+
+/* body*/
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: white;
+	font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #152153;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+}
+
+
+.dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+	    position: relative; 
+ 
+}
+
+/*Profile  */
+.welcome-profile-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.welcome-section {
+    width: 30%;
+    text-align: left;
+    padding: 20px;
+}
+
+.welcome-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.welcome-section img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile-password-section {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+	gap: 20px;
+}
+
+.profile-update, .password-change {
+    width: 45%;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 40px;
+	
+}
+
+.profile-update h3, .password-change h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.profile-update form input, .password-change form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.profile-update form button, .password-change form button {
+    width: 108%;
+    padding: 10px;
+    background-color: #152153;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+/* Courses Section */
+.courses-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.courses-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.coursebox {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    padding: 20px;
+    margin: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+	transition: transform 0.5s, box-shadow 0.3s;
+}
+
+.coursebox h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.coursebox p {
+    font-size: 14px;
+    color: #6c6c6c;
+    margin-bottom: 20px;
+}
+
+.coursebox a {
+    font-size: 14px;
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.coursebox:hover {
+    transform: scale(1.05); /* Pop effect */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+.coursebox a:hover {
+    text-decoration: underline;
+}
+
+.coursebox .arrow {
+    margin-left: 5px;
+}
+
+.coursebox {
+    position: relative; 
+}
+
+.continue-learning {
+    position: absolute; 
+    top: 79px; 
+    left: 10px; 
+    padding: 5px 10px; 
+    border-radius: 8px;
+    z-index: 10; 
+}
+
+.coursebox img {
+    width: 185px; 
+    height: 95px; 
+    border-radius: 5px;
+    background-color: #f0f4ff;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .courses-container {
+        flex-direction: column;
+    }
+
+    .coursebox {
+        width: 90%;
+    }
+
+    .welcome-profile-section {
+        flex-direction: column;
+    }
+
+    .profile-password-section {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .profile-update, .password-change {
+        width: 100%;
+    }
+}
+
+

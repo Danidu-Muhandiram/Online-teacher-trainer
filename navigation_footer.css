@@ -1,0 +1,337 @@
+/*Navigation Bar*/
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: white;
+}
+
+.main_landing_section {
+    width: 100%;
+    min-height: 2vh;
+    overflow: hidden;
+    background-position: center;
+    
+    
+    
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    left: 0;
+    right: 0;
+    padding: 0 10px;
+    margin-left: 0;
+    box-shadow:  0 0 10px rgba(0,0,0,0.5);
+    background-color: white;
+    position: fixed;
+    z-index: 1000;
+    
+}
+
+.navbar div img {
+    width: 180px;
+    margin-left: 10px;
+    padding-bottom: 2px;
+    padding-top: 2px; 
+    cursor: pointer;
+}
+
+.navbarlist{
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    margin-left: auto;
+    
+}
+
+.navbarlist li a{
+    color: #152153;
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    transition: 0.1s;   
+}
+
+.navbarlist li a:hover{
+    color: #172e83;
+}
+
+.navbarlist li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #172e83;
+    display: block;
+    transition: 0.4s linear;
+}
+
+.navbarlist li a:hover::after{
+    width: 100%;
+}
+
+.search_bar{
+    margin-right: 40px;
+    margin-left: 30px;
+    position: relative;
+}
+
+.search_bar form input{
+    background: transparent;
+    width: 20vw;
+    font-size: 15px;
+    padding: 6px;
+    border: 2px solid #152153;
+    outline: none;
+    border-radius: 40px;
+    color: #152153;
+}
+
+.search_bar form input::placeholder{
+    color: #152153;
+}
+
+.search_bar button{
+    padding: 6px 6px;
+    font-size: 16px;
+    float: left;
+    border: none;
+    border-radius: 40px;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: #1521533d;
+}
+
+.nav_buttons{
+    display: flex;
+    gap: 10px;
+    margin-right: 10px;
+}
+
+.nav_buttons button{
+    padding:6px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 40px;
+    padding: 7px 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 550;
+    align-items: center;
+}
+.register_button{
+    background-color: transparent;
+    border: 2px solid #152153;
+    color: #152153;
+}
+
+.register_button:hover{
+    background-color: #152153;
+    color: white;
+}
+
+.login_button{
+    background-color: #152153;
+    color: white;
+    border: none;
+}
+
+.login_button:hover{
+    background-color: #172e83;
+    color: white;
+    border: none;
+}
+
+/*navigation bar changing css
+.navbar.scrolled {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: white;
+
+}*/
+
+/*.user_profile{
+    border:2px solid lightgrey;
+    font-size: 15px;
+    padding:6px 8px 6px 8px;
+    background: rgba(211, 211, 211, 0.5);
+    margin-right: -55px;
+
+}*/
+
+
+
+
+
+
+/*Footer CSS*/
+
+
+
+ /* Footer General Styling */
+ .footer_section {
+    background-color: #152153;
+    padding: 40px 0;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.footer_container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.footer_columns {
+    flex: 1;
+    min-width: 220px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.footer_columns h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.footer_columns ul {
+    padding: 0;
+}
+
+.footer_columns ul li {
+    list-style: none;
+    margin-bottom: 3px;
+}
+
+.footer_columns ul a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer_columns ul a:hover {
+    color: #f1c40f;
+}
+
+.footer_columns p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.footer_columns img {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+/* Adjust column spacing */
+.footer_columns:first-child {
+    padding-left: 0;
+}
+
+.footer_columns:last-child {
+    padding-right: 0;
+}
+
+/* Social Media Icons - Vertical */
+.footer_columns ul.social-icons {
+    display: block;
+}
+
+.footer_columns ul.social-icons li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.footer_columns ul.social-icons a {
+    font-size: 18px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer_columns ul.social-icons a:hover {
+    color: #f1c40f;
+}
+
+/* Footer Bottom Section */
+.footer_bottom {
+    text-align: center;
+    margin-top: 72px;
+    padding-top: 10px;
+    border-top: 1px solid #ffffff1a;
+    font-size: 12px;
+    color: #b0b0b0;
+}
+
+
+/*Home nav bar changes*/
+.profile_circle {
+    width: 40px;
+    height: 40px;
+    background-color: #f88a22;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+.user_profile {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 150px;
+}
+
+.dropdown_menu li {
+    padding: 10px 20px;
+    text-align: left;
+}
+
+.dropdown_menu li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown_menu li a:hover {
+    color: #f88a22;
+    background-color: #f4f4f4;
+}
+
+.user_profile:hover .dropdown_menu {
+    display: block;
+}
