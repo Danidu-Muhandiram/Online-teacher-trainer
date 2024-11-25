@@ -622,8 +622,8 @@ section .main_section div h1{
 
  /* Footer General Styling */
  .footer_section {
-    background-color: #152153;
-    padding: 40px 0;
+    background-color: #573c30;
+    padding: 20px 0;
     color: white;
     font-family: Arial, sans-serif;
 }
@@ -633,8 +633,9 @@ section .main_section div h1{
     justify-content: space-between;
     flex-wrap: wrap;
     max-width: 1200px;
-    height: 80px;
+    min-height: 80px;
     margin: 0 auto;
+    gap: 20px;
 }
 
 .footer_columns {
@@ -713,7 +714,7 @@ section .main_section div h1{
 /* Footer Bottom Section */
 .footer_bottom {
     text-align: center;
-    margin-top: 72px;
+    margin-top: 0px;
     padding-top: 10px;
     border-top: 1px solid #ffffff1a;
     font-size: 12px;
@@ -724,7 +725,7 @@ section .main_section div h1{
 .profile_circle {
     width: 40px;
     height: 40px;
-    background-color: #f88a22;
+    background-color: #573c30;
     color: white;
     display: flex;
     align-items: center;
