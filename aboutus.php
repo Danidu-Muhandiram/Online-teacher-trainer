@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <title>About Us</title>
     <link rel="stylesheet" href="navigation_footer.css">
-    <link rel="stylesheet" href="Trainer_New/aboutus.css">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="aboutus.css">
     
 
     <script src="aboutus.js"></script> <!-- Link JavaScript file -->
@@ -34,7 +35,7 @@
         </div>
 <!--staff members part-->
    
-        <div class="staff-members">
+        <!--<div class="staff-members">
             <h1>Our Team</h1>
             <div class="staff-list">
                 <div class="staff">
@@ -62,7 +63,7 @@
                     <p>David Clark - Marketing Manager</p>
                 </div>
             </div>
-        </div>
+        </div>-->
     </section>
 
     <!-- Footer Html Codes -->

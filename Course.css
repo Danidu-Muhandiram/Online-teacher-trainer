@@ -10,35 +10,40 @@ body {
     /*margin: 10px;
     padding: 5px;
     height: 100vh;*/
-    background: url(danidu_src/backgroundv2.png);
 }
 
 .course-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /*background-color: whitesmoke;*/
+    background-color: whitesmoke;
     column-gap: 20px;
-    row-gap: 10px;
+    row-gap: 20px;
     margin: 20px;
-    margin-top: 60px;
-    padding: 5px;
+    margin-top: 55px;
+    padding: 50px;
 }
 
 
 h3 {
-    font-size: 35px;
+    font-size: 30px;
     text-align: center;
     padding-bottom: 15px;
     line-height: 30px;
+    color: #573c30;
+    font-family: "Lora", serif;
 }
 
 .coursecontent {
-    margin-bottom: 35px;
-    padding: 10px;
-    box-shadow: -10px 20px 20px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    line-height: 24px;
-    background-color: whitesmoke;
+    padding: 20px 20px 20px 20px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    transform: scale(1);
+    transition: transform 0.3s ease;
 }
 
 .update-btn {
@@ -62,10 +67,11 @@ h3 {
 .buy-btn {
     float: right;
     border: none;
-    background-color: rgb(25, 25, 216);
-    padding: 5px;
-    border-radius: 3px;
+    background-color: #7c503d;
+    padding: 6px 12px 6px 12px;
+    border-radius: 18px;
     color: white;
+    margin-top: 10px;
 }
 
 button:hover {

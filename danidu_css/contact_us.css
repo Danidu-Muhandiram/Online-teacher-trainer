@@ -1,8 +1,3 @@
-/*{
-    padding: 0;
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-}*/
 
 body{
     justify-content: center;
@@ -45,8 +40,9 @@ body{
 
 .contact_info h1{
     font-size: 40px;
+    font-family: "Lora", serif;
     padding-bottom: 20px;
-    color: #172e83;
+    color: #573c30;
 }
 
 .contact_info p{
