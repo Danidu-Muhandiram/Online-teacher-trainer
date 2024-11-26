@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-    background: transparent;
+    background: rgba(245, 245, 245, 0.075);
     backdrop-filter: blur(6px);
     width: 350px;
     height: 350px;
@@ -23,6 +23,8 @@ body {
 
 .container h2 {
     font-size: 25px;
+    font-family: "Lora", serif;
+    color: #573c30;
 }
 
 .input-field {
@@ -30,8 +32,7 @@ body {
 }
 
 .input-field input {
-    background: transparent;
-    backdrop-filter: blur(10px);
+    background-color: whitesmoke;
     border-radius: 5px;
     margin: 12px;
     border: 2px solid black;
@@ -41,7 +42,7 @@ body {
 }
 
 .login {
-    background-color: #18185c;
+    background-color: #573c30;
     color: white;
     border: none;
     cursor: pointer;

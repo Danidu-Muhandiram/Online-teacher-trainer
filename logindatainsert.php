@@ -24,7 +24,7 @@
             $_SESSION['role'] = 'teacher';
             echo "Welcome Teacher, " . $teacher['fname'];
             $_SESSION['fname'] = $teacher['fname'];
-            header("Location: student_dashboard.html"); // Handle teacher login here (e.g., redirect to teacher dashboard)
+            header("Location: Course.php"); // Handle teacher login here (e.g., redirect to teacher dashboard)
             exit;
         }
 

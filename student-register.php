@@ -10,9 +10,9 @@
         <a href="login.html"><button>Log in</button></a>
     </div>
     <div class="register-details">
-        <div class="logo">
+        <!--<div class="logo">
             <img src="images/logo5.png" alt="">
-        </div>
+        </div>-->
         <form method = "post" action="stddatainsert.php" onsubmit="return validateInputs()">
             <div class="input-field">
                 <input type="text" name="sfname" placeholder="First Name" required>
@@ -42,8 +42,9 @@
                 <p id="errorMessage"></p>
             </div>
             <button type="submit" class="register">Create an account</button>      
+            <p class="sign-in">already have an account? <a href="login.html">Sign in</a></p>
         </form>
-        <p class="sign-in">already have an account? <a href="login.html">Sign in</a></p>
+        
     </div>
     
     <script src="student-register.js"></script>    
