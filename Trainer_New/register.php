@@ -40,17 +40,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         die("Email is already registered.");
     }
 
-    // Fetch the latest trainer_id
-    $query = "SELECT trainer_id FROM trainer ORDER BY trainer_id DESC LIMIT 1";
-    $result = mysqli_query($conn, $query);
-    if ($result && mysqli_num_rows($result) > 0) {
-        $row = mysqli_fetch_assoc($result);
-        $last_trainer_id = $row['trainer_id'];
-        $numeric_id = (int)substr($last_trainer_id, 2); // Extract numeric part of the ID
-        $next_trainer_id = 'TR' . str_pad($numeric_id + 1, 4, '0', STR_PAD_LEFT); // Increment ID
-    } else {
-        $next_trainer_id = 'TR0001'; // Properly start from TR0001
-    }
+    // Fetch the latest trainer_id and calculate the next one
+$query = "SELECT trainer_id FROM trainer ORDER BY CAST(SUBSTR(trainer_id, 3) AS UNSIGNED) DESC LIMIT 1";
+$result = mysqli_query($conn, $query);
+
+if ($result && mysqli_num_rows($result) > 0) {
+    $row = mysqli_fetch_assoc($result);
+    $last_numeric_id = (int)substr($row['trainer_id'], 2); // Extract numeric part (after TR)
+    $next_trainer_id = 'TR' . str_pad($last_numeric_id + 1, 3, '0', STR_PAD_LEFT); // Increment ID
+} else {
+    $next_trainer_id = 'TR002'; // Start from TR002 if no records exist
+}
 
     // Insert new trainer
     $stmt = $conn->prepare("INSERT INTO trainer (trainer_id, fname, lname, email, phone_number, country, subject, qualification_level, password) 
@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $stmt->bind_param("sssssssss", $next_trainer_id, $sFName, $sLName, $sEmail, $sTelephone, $sCountry, $sSubject, $sQualification, $sPasswordHash);
 
     if ($stmt->execute()) {
-        header("Location: login.php");
+        header("Location: ../login.html");
         exit;
     } else {
         die("Error executing query: " . $stmt->error);

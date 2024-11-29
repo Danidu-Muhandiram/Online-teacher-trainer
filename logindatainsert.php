@@ -25,26 +25,39 @@
             $_SESSION['role'] = 'teacher';
              echo "Welcome Teacher, " . $teacher['fname'];
             $_SESSION['fname'] = $teacher['fname'];
-            header("Location: Course.php"); // Handle teacher login here (e.g., redirect to teacher dashboard)
+            header("Location: home.php"); // Handle teacher login here (e.g., redirect to teacher dashboard)
             exit;
         }
 
-        // Check in trainer table
-        $trainer_query = "SELECT * FROM trainer WHERE (email = ?) AND password = ?";
-        $stmt = $con->prepare($trainer_query);
-        $stmt->bind_param("ss", $email_or_username, $password);
-        $stmt->execute();
-        $result = $stmt->get_result();
+       // Check in trainer table
+$trainer_query = "SELECT * FROM trainer WHERE email = ?";
+$stmt = $con->prepare($trainer_query);
+$stmt->bind_param("s", $email_or_username);
+$stmt->execute();
+$result = $stmt->get_result();
 
-        if ($result->num_rows > 0) {
-            // Trainer login successful
-            $trainer = $result->fetch_assoc();
-            $_SESSION['user_id'] = $trainer['trainer_id'];
-            $_SESSION['role'] = 'trainer';
-            echo "Welcome Trainer, " . $trainer['fname'];
-            header("Location: Trainer_New/dashboard.php"); // Handle trainer login here (e.g., redirect to trainer dashboard)
-            exit;
-        }
+if ($result->num_rows > 0) {
+    // Fetch trainer details
+    $trainer = $result->fetch_assoc();
+
+    // Verify password using password_verify
+    if (password_verify($password, $trainer['password'])) {
+        // Trainer login successful
+        $_SESSION['user_id'] = $trainer['trainer_id'];
+        $_SESSION['role'] = 'trainer';
+        $_SESSION['email'] = $trainer['email'];
+        $_SESSION['fname'] = $trainer['fname'];
+
+        // Redirect to trainer's dashboard
+        header("Location: course.php");
+        exit;
+    } else {
+        echo "<script>alert('Invalid password');</script>";
+    }
+} else {
+    echo "<script>alert('No trainer found with this email');</script>";
+}
+
 
         // Check in admin table
         $admin_query = "SELECT * FROM admin WHERE email = ?  AND password = ?";

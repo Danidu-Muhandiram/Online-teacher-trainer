@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($logpassword, $row['password'])) {
             $_SESSION['trainer_id'] = $row['trainer_id'];
             $_SESSION['email'] = $row['email'];
-            header("Location: dashboard.php");
+            header("Location: ../course.php");
             exit();
         } else {
             echo "<script>alert('Invalid password');</script>";
