@@ -759,7 +759,7 @@ section .main_section div h1{
 }
 
 .dropdown_menu li {
-    padding: 10px 20px;
+    padding: 5px 10px;
     text-align: left;
 }
 
@@ -769,10 +769,11 @@ section .main_section div h1{
 }
 
 .dropdown_menu li a:hover {
-    color: #f88a22;
+    color: #573c30;
     background-color: #f4f4f4;
 }
 
 .user_profile:hover .dropdown_menu {
     display: block;
 }
+

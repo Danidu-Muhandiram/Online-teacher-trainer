@@ -107,16 +107,23 @@ function validatePayment() {
 }
 
 
-//home page buttons
+    document.addEventListener("DOMContentLoaded", () => {
+    const profileCircle = document.querySelector(".profile_circle");
+    const dropdownMenu = document.querySelector(".dropdown_menu");
 
-let startButton = document.getElementById('startnowbutton');
-startButton.addEventListener('click', function(){
-    window.location.href='./course.php';
+    // Toggle the dropdown on click
+    profileCircle.addEventListener("click", (e) => {
+        e.stopPropagation(); // Prevent event from bubbling to the document
+        dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+    });
+
+    // Close the dropdown if clicking outside of it
+    document.addEventListener("click", () => {
+        dropdownMenu.style.display = "none";
+    });
+
+    // Prevent dropdown from closing when clicking inside the menu
+    dropdownMenu.addEventListener("click", (e) => {
+        e.stopPropagation();
+    });
 });
-
-let aboutButton = document.getElementById('aboutbutton');
-aboutButton.addEventListener('click', function(){
-    window.location.href='./aboutus.php';
-});
-
-

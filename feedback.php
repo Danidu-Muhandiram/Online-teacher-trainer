@@ -12,7 +12,7 @@
 
        <!--Navigation Bar-->
 		<!-- Include the navigation bar -->
-        <?php include 'navigation_bar.html'; ?>
+        <?php include 'navigation_bar.php'; ?>
  
 
 		

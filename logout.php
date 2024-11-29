@@ -4,6 +4,6 @@ session_start(); // Start the session
 // Destroy the session
 session_destroy();
 
-header("Location: login.html");
+header("Location: home.php");
 exit;
 ?>

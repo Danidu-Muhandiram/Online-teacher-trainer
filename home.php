@@ -45,7 +45,7 @@ $is_logged_in = isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'
                     
                         <?php if (isset($_SESSION['role']) && isset($_SESSION['fname'])): ?>
                             <li class="user_profile">
-                                <div class="profile_circle">
+                                <div class="profile_circle" class="dropdownToggle">
                                     <?php echo strtoupper($_SESSION['fname'][0]); ?>
                                 </div>
                             <ul class="dropdown_menu">

@@ -18,11 +18,12 @@
         $result = $stmt->get_result();
 
         if ($result->num_rows > 0) {
-            // Teacher login successful
             $teacher = $result->fetch_assoc();
+            // Teacher login successful
+            $_SESSION['email'] = $teacher['email'];
             $_SESSION['user_id'] = $teacher['teacher_id'];
             $_SESSION['role'] = 'teacher';
-            echo "Welcome Teacher, " . $teacher['fname'];
+             echo "Welcome Teacher, " . $teacher['fname'];
             $_SESSION['fname'] = $teacher['fname'];
             header("Location: Course.php"); // Handle teacher login here (e.g., redirect to teacher dashboard)
             exit;
