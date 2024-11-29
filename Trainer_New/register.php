@@ -1,56 +1,75 @@
 <?php
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "online_teacher_trainer";
 
-// Database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "online_teacher_trainer";
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+    // Form data
+    $sFName = $_POST["fname"] ?? '';
+    $sLName = $_POST["lname"] ?? '';
+    $sEmail = $_POST["email"] ?? '';
+    $sTelephone = $_POST["phone_number"] ?? '';
+    $sCountry = $_POST["country"] ?? '';
+    $sSubject = $_POST["subject"] ?? '';
+    $sQualification = $_POST["education"] ?? '';
+    $sPassword = $_POST["password"] ?? '';
+    $confirmPassword = $_POST["confirm_password"] ?? '';
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    if (empty($sFName) || empty($sLName) || empty($sEmail) || empty($sPassword) || empty($confirmPassword)) {
+        die("All required fields must be filled.");
+    }
+
+    if ($sPassword !== $confirmPassword) {
+        die("Passwords do not match.");
+    }
+
+    $sPasswordHash = password_hash($sPassword, PASSWORD_DEFAULT);
+
+    // Check if email exists
+    $emailCheckStmt = $conn->prepare("SELECT email FROM trainer WHERE email = ?");
+    $emailCheckStmt->bind_param("s", $sEmail);
+    $emailCheckStmt->execute();
+    $emailCheckResult = $emailCheckStmt->get_result();
+    if ($emailCheckResult->num_rows > 0) {
+        die("Email is already registered.");
+    }
+
+    // Fetch the latest trainer_id
+    $query = "SELECT trainer_id FROM trainer ORDER BY trainer_id DESC LIMIT 1";
+    $result = mysqli_query($conn, $query);
+    if ($result && mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        $last_trainer_id = $row['trainer_id'];
+        $numeric_id = (int)substr($last_trainer_id, 2); // Extract numeric part of the ID
+        $next_trainer_id = 'TR' . str_pad($numeric_id + 1, 4, '0', STR_PAD_LEFT); // Increment ID
+    } else {
+        $next_trainer_id = 'TR0001'; // Properly start from TR0001
+    }
+
+    // Insert new trainer
+    $stmt = $conn->prepare("INSERT INTO trainer (trainer_id, fname, lname, email, phone_number, country, subject, qualification_level, password) 
+                            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssssssss", $next_trainer_id, $sFName, $sLName, $sEmail, $sTelephone, $sCountry, $sSubject, $sQualification, $sPasswordHash);
+
+    if ($stmt->execute()) {
+        header("Location: login.php");
+        exit;
+    } else {
+        die("Error executing query: " . $stmt->error);
+    }
+
+    $stmt->close();
+    $conn->close();
 }
-
-$sFName = $_POST["fname"];
-$sLName = $_POST["lname"];
-$sEmail = $_POST["email"];
-$sTelephone = $_POST["phone_number"];
-$sCountry = $_POST["country"];
-$sSubject = $_POST["subject"];
-$sQualification = $_POST["education"];
-$sPassword = password_hash($_POST["password"], PASSWORD_DEFAULT); // Use hashed password for security
-
-// Fetch the latest trainer_id and calculate the next one
-$query = "SELECT trainer_id FROM trainer ORDER BY trainer_id DESC LIMIT 1";
-$result = mysqli_query($conn, $query);
-
-if ($result && mysqli_num_rows($result) > 0) {
-    $row = mysqli_fetch_assoc($result);
-    $last_trainer_id = $row['trainer_id'];
-    $next_trainer_id = 'TR' . str_pad(((int)substr($last_trainer_id, 2)) + 1, 4, '0', STR_PAD_LEFT); // Increment ID
-} else {
-    $next_trainer_id = 'TR0001'; // Start from TR0001 if no records found
-}
-
-// Prepare the SQL statement
-$stmt = $conn->prepare("INSERT INTO trainer (trainer_id, fname, lname, email, phone_number, country, subject, qualification_level, password) 
-                       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-$stmt->bind_param("sssssssss", $next_trainer_id, $sFName, $sLName, $sEmail, $sTelephone, $sCountry, $sSubject, $sQualification, $sPassword);
-
-// Execute the query and check for success
-if ($stmt->execute()) {
-    header("Location: login.php"); // Redirect to login page on success
-} else {
-    echo "Error: " . $stmt->error; // Display error message
-}
-
-$stmt->close(); // Close the prepared statement
-$conn->close(); // Close the database connection
-
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
