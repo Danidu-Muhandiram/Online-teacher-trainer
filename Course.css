@@ -48,20 +48,21 @@ h3 {
 
 .update-btn {
     border: none;
-    width: 50px;
     background-color: rgb(23, 194, 23);
     margin-bottom: 3px;
-    padding: 5px;
-    border-radius: 3px;
+    padding: 6px 12px 6px 12px;
+    border-radius: 18px;
     color: white;
+    margin-top: 10px;
 }
 
 .delete-btn {
     border: none;
     background-color: rgb(228, 29, 29);
-    padding: 5px;
-    border-radius: 3px;
+    padding: 6px 12px 6px 12px;
+    border-radius: 18px;
     color: white;
+    margin-top: 10px;
 }
 
 .buy-btn {
@@ -76,4 +77,10 @@ h3 {
 
 button:hover {
     transform: scale(1.02);
+    cursor: pointer;
+}
+
+.btn{
+    display: flex;
+    gap: 8px;
 }

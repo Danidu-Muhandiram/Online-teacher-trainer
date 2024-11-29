@@ -28,7 +28,7 @@
                 echo "<div class='coursecontent'>";
                 echo "<h3>" . $row['title'] . "</h3>";
                 echo "<p>" . $row['description'] . "</p>";
-
+                    echo "<div class=btn>";
                 if($user == 'admin' || $user == 'trainer') {
                     echo "<form action='update.php' method='post'>"; 
                     echo "<input type='hidden' name='id' value='" . $row['course_id'] . "'>"; 
@@ -40,8 +40,10 @@
                     echo "<button class='delete-btn' type='submit' onclick='return confirm(\"Are you sure you want to delete this course?\")'>Delete</button>";
                     echo "</form>";
                 }
-                echo "<a href='payment.php'><button class='buy-btn'>Enroll Now</button></a>";
 
+                elseif($user == 'admin' || $user == 'student') {
+                echo "<a href='payment.php'><button class='buy-btn'>Enroll Now</button></a>";}
+                    echo "</div>";
                 echo "</div>";
                 
             }
