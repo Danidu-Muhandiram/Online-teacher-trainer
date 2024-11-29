@@ -84,3 +84,12 @@ button:hover {
     display: flex;
     gap: 8px;
 }
+
+.add-course img{
+    max-width: 50px;
+    float: right;
+    margin-top: -80px;
+    margin-bottom: 0;
+    margin-right: 10px;
+    cursor: pointer;
+}
