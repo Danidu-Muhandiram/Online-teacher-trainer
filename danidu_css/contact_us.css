@@ -12,12 +12,12 @@ body{
     justify-content: center;
     align-items: center;
     padding-top: 100px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 }
 
 .Contact_us_items {
     width: 1100px;
-    min-height: 600px; /* Minimum height, but allow growth */
+    min-height: 600px;
     height: auto;
     border-radius: 10px;
     background-color: white;
@@ -27,10 +27,12 @@ body{
     grid-template-columns: repeat(2, 1fr);
     display: grid;
     z-index: 1;
+    padding-bottom: 0px;
 }
 
 .submit_form{
     background-color: lightgray;
+    
 }
 
 .contact_info{
@@ -60,11 +62,14 @@ body{
 
 .phone_info i{
     font-size: 50px;
+    color: #25D366;
     padding-right: 35px;
+    padding-top: 10px;
 }
 
 .phone_info h3{
     position: relative;
+    color: #573c30;
     top: 5px;
 }
 
@@ -72,6 +77,7 @@ body{
     position: absolute;
     left: 258px;
     margin-top: 25px;
+    color: #573c30;
 }
 
 .Email_info{
@@ -79,20 +85,24 @@ body{
 }
 
 .Email_info i{
-    font-size: 50px;
+    font-size: 45px;
+    color: #0078d4;
     padding-right: 35px;
+    padding-top: 8px;
 }
 
 .Email_info h3{
     position: relative;
     top: 5px;
-    margin-left: -4px;
+    margin-left: 0px;
+    color: #573c30;
 }
 
 .Email_info h4{
     position: absolute;
     left: 258px;
     margin-top: 25px;
+    color: #573c30;
 }
 
 .follow_us_links ul li{ 
@@ -101,7 +111,7 @@ body{
 
 .follow_us_links h1{
     font-size: 30px;
-    padding-top: 20px;
+    padding-top: 50px;
 }
 
 .follow_us_icons{
@@ -110,13 +120,29 @@ body{
 
 .follow_us_icons i{
     font-size: 40px;
-    color: black;
     padding-right: 15px;
+}
+
+.follow_us_icons li a .fa-facebook-square {
+    color: #3b5998; /* Facebook blue */
+}
+
+.follow_us_icons li a .fa-instagram {
+    color: #e4405f; /* Instagram gradient*/
+}
+
+.follow_us_icons li a .fa-linkedin {
+    color: #0077b5; /* LinkedIn blue */
+}
+
+.follow_us_icons li a .fa-youtube {
+    color: #ff0000; /* YouTube red */
 }
 
 .submit_form {
     width: 100%;
     padding-top: 20px;
+    padding-bottom: 30px;
 }
 
 .input_box {
@@ -136,15 +162,16 @@ body{
     box-sizing: border-box;
     outline: none;
 }
-
+ 
 .contact_us_button{
     font-size: 16px;
-    padding: 8px 15px 8px 15px;
+    padding: 8px 25px 8px 15px;
     align-items: center;
     font-weight: 500;
     cursor: pointer;
     border-radius: 10px;
-    background-color: #152153e0;
+    background-color:#573c30;
+
     border: none;
     color: white;
     text-transform: uppercase;
