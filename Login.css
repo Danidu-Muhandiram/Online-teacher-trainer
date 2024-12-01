@@ -11,18 +11,18 @@ body {
 }
 
 .container {
-    background: rgba(245, 245, 245, 0.075);
+    border: 1px solid #573c30a1;
+    background-color: rgba(245, 245, 245, 0.452);
     backdrop-filter: blur(6px);
-    width: 350px;
+    width: 450px;
     height: 350px;
     text-align: center;
-    border: 2px solid black;
     border-radius: 10px;
     padding: 10px 20px;
 }
 
 .container h2 {
-    font-size: 25px;
+    font-size: 30px;
     font-family: "Lora", serif;
     color: #573c30;
 }
@@ -32,25 +32,38 @@ body {
 }
 
 .input-field input {
-    background-color: whitesmoke;
+    border: 1px solid #573c30a1;
+    background-color: rgb(245, 245, 245);
     border-radius: 5px;
     margin: 12px;
-    border: 2px solid black;
     width: 280px;
     height: 3px;
     padding: 20px 40px 20px 20px;
 }
 
+.input-field input::placeholder {
+    color: #573c30;
+    font-size: 14px;
+}
 .login {
-    background-color: #573c30;
+    font-size: 16px;
     color: white;
+    padding: 10px;
+    width: 150px;
+    margin-top: 15px;
     border: none;
+    border-radius: 10px;
+    background-color: #573c30;
     cursor: pointer;
-    border-radius: 40px;
-    width: 200px;
-    height: 30px;
+    text-align: center;
 }
 
 .register {
     text-decoration: none;
+    font-size: 20px;
+}
+
+body p{
+    font-size: 20px;
+    color: #573c30;
 }

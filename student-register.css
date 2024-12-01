@@ -43,12 +43,14 @@ img {
 }
 
 form {
-    border: solid 1px white;
+    border: 1px solid #573c30a1;
     background-color: rgba(245, 245, 245, 0.452);
     padding: 20px;
+    backdrop-filter: blur(6px);
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 10px;
 }
 
 .input-field {
@@ -57,15 +59,19 @@ form {
 }
 
 input {
-
     border-radius: 5px;
     margin: 3px;
-    border: 2px solid white;
+    border: 1px solid #573c30a1;
+    background-color: rgb(245, 245, 245);
     width: 280px;
     height: 3px;
     padding: 20px 40px 20px 20px;
 }
 
+input::placeholder {
+    color: #573c30;
+    font-size: 14px;
+}
 
 #errorMessage {
     color: red;
@@ -103,4 +109,8 @@ form button {
 
 .register-details p{
     padding-top: 4px;
+}
+
+.sign-in a{
+    text-decoration: none;
 }

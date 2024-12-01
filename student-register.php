@@ -3,6 +3,7 @@
     <title>Student Register</title>
     <link rel="stylesheet" href="student-register.css">
     <link rel="stylesheet" href="navigation_footer.css">
+    <link rel="stylesheet" href="font.css">
 </head>
 <body>
     <div class="toggle-button">

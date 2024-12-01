@@ -49,6 +49,7 @@ $conn->close();
 <head>
     <title>Log in</title>
     <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="font.css">
 </head>
 <body>
     <div class="container">
