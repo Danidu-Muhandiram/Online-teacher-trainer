@@ -1,0 +1,119 @@
+
+        body {
+            padding-bottom: 40px;
+            margin: 0;
+            background: url(../images/teach.jpg) no-repeat;
+            background-position: center;
+            background-size: cover;
+            font-family: 'Poppins', sans-serif;
+            background-color: #FAF9F6;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .toggle-button {
+            display: flex;
+            justify-content: end;
+            margin: 25px 25px 60px;
+        }
+
+        .toggle-button button {
+            font-size: 16px;
+            color: white;
+            padding: 5px;
+            margin-right: 2px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            background-color: #18185c;
+            cursor: pointer;
+        }
+
+        .register-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 60px;
+        }
+
+        form {
+            border: 1px solid #573c30a1;
+            background-color: rgba(245, 245, 245, 0.452);
+            padding: 20px;
+            backdrop-filter: blur(6px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 10px;
+        }
+        
+
+        .input-field {
+            margin-top: 5px;
+        }
+        
+        .input-field select {
+            border-radius: 5px !important;
+            margin: 3px;
+            width: 280px;
+            font-family: 'Poppins', sans-serif;
+            background-color: rgb(245, 245, 245);
+            padding: 15px 40px 15px 20px;
+            font-size: 14px; 
+            border:1px solid #573c30a1 !important;
+            box-shadow: none; 
+            color: #573c30 !important;
+            font-size: 14px !important;
+            width: 340px !important;
+        }
+
+        input {
+            border-radius: 5px;
+            margin: 3px;
+            border: 1px solid #573c30a1;
+            font-family: 'Poppins', sans-serif;
+            background-color: rgb(245, 245, 245);
+            width: 280px;
+            height: 3px;
+            padding: 15px 40px 15px 20px;
+        }
+
+        input::placeholder {
+            color: #573c30;
+            font-size: 14px;
+        }
+
+        #edu-select {
+            width: 323px;
+            padding: 10px;
+            border-color: black;
+            border-width: 2px;
+            border-radius: 3px;
+        }
+
+        #errorMessage, #charcheck, #numbermessage {
+            color: red;
+            font-size: 12px;
+        }
+
+        form button {
+            font-size: 16px;
+            color: white;
+            padding: 10px;
+            width: 200px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #573c30;
+            cursor: pointer;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .sign-in, .sign-in a {
+            font-size: 16px;
+            text-decoration: none;
+
+        }
