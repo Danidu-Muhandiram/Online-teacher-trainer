@@ -62,7 +62,7 @@ $conn->close();
                 <input type="password" name="logpassword" placeholder="Password" required>
             </div>
             <button type="submit" class="login">Login</button>
-            <p>Don't have an account? <a class="register" href="register.php">Register</a></p>
+            <p>Don't have an account? <a class="register" href="Regselector.html">Register</a></p>
         </form>
     </div>
 </body>

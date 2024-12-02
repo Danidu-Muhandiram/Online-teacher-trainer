@@ -1,3 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navigation_footer.css">
+    <link rel="stylesheet" href="../font.css">
+    <link rel="stylesheet" href="register.css">
+    <title>Register</title>
+</head>
+<body>
+    <div class="register-details">
+        <form method="POST" action="register.php">
+            <div class="input-field">
+                <input type="text" name="fname" placeholder="First Name" required>
+            </div>
+            <div class="input-field">
+                <input type="text" name="lname" placeholder="Last Name" required>
+            </div>
+            <div class="input-field">
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="input-field">
+                <input type="number" name="phone_number" placeholder="Phone Number" required>
+            </div>
+            <div class="input-field">
+                <input type="text" name="country" placeholder="Country" required>
+            </div>
+            <div class="input-field">
+                <input type="text" name="subject" placeholder="Subject" required>
+            </div>
+            <div class="input-field">
+                <select name="education" id="edu-select" required>
+                    <option value="Bachelor">Bachelor</option>
+                    <option value="Master">Master</option>
+                    <option value="Doctorate">Doctorate</option>
+                </select>
+            </div>
+            <div class="input-field">
+                <input id="password" type="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="input-field">
+                <input id="confirm-password" type="password" name="confirm_password" placeholder="Re-enter password" required>
+            </div>
+            <button type="submit" class="register">Create an account</button>
+            <p class="sign-in">already have an account? <a href="../login.php">Sign in</a></p>
+        </form>
+        
+    </div>
+    <?php
+ ?>
+</body>
+</html>
+
+
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $servername = "localhost";
@@ -71,132 +126,3 @@ if ($result && mysqli_num_rows($result) > 0) {
 
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <style>
-        body {
-            padding: 0;
-            margin: 0;
-            font-family: sans-serif, Arial, Helvetica;
-            background-color: #FAF9F6;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .toggle-button {
-            display: flex;
-            justify-content: end;
-            margin: 15px 15px 50px;
-        }
-
-        .toggle-button button {
-            font-size: 16px;
-            color: white;
-            padding: 5px;
-            margin-right: 2px;
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            background-color: #18185c;
-            cursor: pointer;
-        }
-
-        .register-details {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        form {
-            margin-top: 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .input-field {
-            margin-top: 10px;
-        }
-
-        input {
-            width: 300px;
-            padding: 10px;
-            border-color: black;
-            border-width: 2px;
-            border-radius: 3px;
-        }
-
-        #edu-select {
-            width: 323px;
-            padding: 10px;
-            border-color: black;
-            border-width: 2px;
-            border-radius: 3px;
-        }
-
-        #errorMessage, #charcheck, #numbermessage {
-            color: red;
-            font-size: 12px;
-        }
-
-        form button {
-            font-size: 16px;
-            color: white;
-            padding: 10px;
-            width: 200px;
-            margin-top: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #18185c;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
-    <div class="register-details">
-        <form method="POST" action="register.php">
-            <div class="input-field">
-                <input type="text" name="fname" placeholder="First Name" required>
-            </div>
-            <div class="input-field">
-                <input type="text" name="lname" placeholder="Last Name" required>
-            </div>
-            <div class="input-field">
-                <input type="email" name="email" placeholder="Email" required>
-            </div>
-            <div class="input-field">
-                <input type="number" name="phone_number" placeholder="Phone Number" required>
-            </div>
-            <div class="input-field">
-                <input type="text" name="country" placeholder="Country" required>
-            </div>
-            <div class="input-field">
-                <input type="text" name="subject" placeholder="Subject" required>
-            </div>
-            <div class="input-field">
-                <select name="education" id="edu-select" required>
-                    <option value="Bachelor">Bachelor</option>
-                    <option value="Master">Master</option>
-                    <option value="Doctorate">Doctorate</option>
-                </select>
-            </div>
-            <div class="input-field">
-                <input id="password" type="password" name="password" placeholder="Password" required>
-            </div>
-            <div class="input-field">
-                <input id="confirm-password" type="password" name="confirm_password" placeholder="Re-enter password" required>
-            </div>
-            <button type="submit" class="register">Create an account</button>
-        </form>
-        <p class="sign-in">already have an account? <a href="login.php">Sign in</a></p>
-    </div>
-    <?php
- ?>
-</body>
-</html>
