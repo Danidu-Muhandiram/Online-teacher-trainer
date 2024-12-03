@@ -22,7 +22,7 @@
     }
     h1 {
       text-align: center;
-      color: #333;
+      color: #573c30;
     }
     form {
       display: flex;

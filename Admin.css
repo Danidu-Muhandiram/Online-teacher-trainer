@@ -126,8 +126,9 @@ body {
 .logout-btn {
     width: 90%;
     padding: 10px 15px;
-    background-color: red;
-    color: white;
+    background-color: #DCDCDC ;
+    color: #664537;
+    font-weight: 800;
     border: none;
     border-radius: 4px;
     cursor: pointer;

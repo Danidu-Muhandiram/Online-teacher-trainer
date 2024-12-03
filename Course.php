@@ -29,6 +29,8 @@
                 echo "<h3>" . $row['title'] . "</h3>";
                 echo "<p>" . $row['description'] . "</p>";
                     echo "<div class=btn>";
+
+
                 if($user == 'admin' || $user == 'trainer') {
                     echo "<form action='update.php' method='post'>"; 
                     echo "<input type='hidden' name='id' value='" . $row['course_id'] . "'>"; 
@@ -39,22 +41,25 @@
                     echo "<input type='hidden' name='delete_id' value='" . htmlspecialchars($row['course_id']) . "'>";
                     echo "<button class='delete-btn' type='submit' onclick='return confirm(\"Are you sure you want to delete this course?\")'>Delete</button>";
                     echo "</form>";
+
                 }
 
-                elseif($user == 'admin' || $user == 'student') {
+                elseif($user == 'admin' || $user == 'teacher') {
                 echo "<a href='payment.php'><button class='buy-btn'>Enroll Now</button></a>";}
                     echo "</div>";
                 echo "</div>";
                 
             }
             echo "</div>";
+
+            echo "<div class='add-course'>";
+                    echo "<a href='addcourse.php'>";
+                    echo "<img src='images/plus.png' alt= 'add image'>";
+                    echo "</a>";
+                    echo "</div>";
         }
 
-        echo "<div class='add-course'>";
-        echo "<a href='addcourse.php'>";
-        echo "<img src='images/plus.png' alt= 'add image'>";
-        echo "</a>";
-        echo "</div>";
+        
         
         $con -> close();
     ?>
