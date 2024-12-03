@@ -70,6 +70,11 @@ body{
     color: #573c30;
 }
 
+.navbarlist a.active {
+    color: #573c30;
+    pointer-events: none;
+  }
+
 .navbarlist li a::after{
     content: '';
     width: 0;
@@ -77,6 +82,10 @@ body{
     background-color: #4d352a;
     display: block;
     transition: 0.4s linear;
+}
+
+.navbarlist li a.active::after{
+    width: 100%;
 }
 
 .navbarlist li a:hover::after{

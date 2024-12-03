@@ -55,3 +55,5 @@ $is_logged_in = isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'
 
             </nav>
         </section>
+
+        <script src="danidu_js/script.js"></script>

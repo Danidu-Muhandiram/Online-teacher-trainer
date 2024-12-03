@@ -127,3 +127,15 @@ function validatePayment() {
         e.stopPropagation();
     });
 });
+
+
+    const navLinks = document.querySelectorAll('.navbarlist a');
+
+    // Get the current page's file name from the URL
+    const currentPage = window.location.pathname.split("/").pop();
+
+    navLinks.forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+    }
+    });
