@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" description="width=device-width, initial-scale=1.0">    <!-- for responsiveness -->
     <title>Document</title>
-    <link rel="stylesheet" href="css/Blog.css">
     <link rel="stylesheet" href="navigation_footer.css">
+    <link rel="stylesheet" href="css/Blog.css">
+    <link rel="stylesheet" href="font.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 </head>
 <body>
 
      <!-- Include the navigation bar -->
-     <?php include 'navigation_bar.php'; ?>
+    <?php include 'navigation_bar.php'; ?>
 
     <!-- slider -->
     <div class="slider">

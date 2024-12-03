@@ -3,7 +3,7 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: "Poppins", sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 html{
@@ -57,7 +57,6 @@ body{
 .navbarlist li a{
     color: #573c30;
     font-size: 16px;
-    font-family: "Lora", serif;
     font-weight: 600;
     font-family: "Open Sans", sans-serif;
     display: block;
@@ -106,7 +105,7 @@ body{
 }
 
 .search_bar button{
-    padding: 6px 6px;
+    padding: 6px 8px;
     font-size: 16px;
     float: left;
     border: none;

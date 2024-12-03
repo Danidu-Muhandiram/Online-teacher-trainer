@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="navigation_footer.css">
     <link rel="stylesheet" href="font.css">
     <link rel="stylesheet" href="aboutus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
 
     <script src="aboutus.js"></script> <!-- Link JavaScript file -->
@@ -71,7 +72,6 @@
      <!-- Include the footer -->
      <?php include 'footer.html'; ?>
     <script src="danidu_js/script.js"></script>
-</section>
 </body>
 </html>
 

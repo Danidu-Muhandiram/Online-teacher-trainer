@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>About Us</title>
-    <link rel="stylesheet" href="aboutus.css">
     <link rel="stylesheet" href="navigation_footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="aboutus.css">
     <script defer src="aboutus.js"></script> <!-- Link JavaScript file -->
 </head>
 <body>
     <!-- Navigation Bar Html Codes -->
      <!-- Include the navigation bar -->
-     <?php include 'navigation_bar.html'; ?>
+     <?php include 'navigation_bar.php'; ?>
 
     <!-- About Us Section -->
     <section class="about-us-section" id="about">
@@ -66,9 +65,6 @@
      <!-- Include the footer -->
      <?php include 'footer.html'; ?>
     <script src="danidu_js/script.js"></script>
-    
-
-</section>
 </body>
 </html>
 
