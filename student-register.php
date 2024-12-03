@@ -43,7 +43,7 @@
                 <p id="errorMessage"></p>
             </div>
             <button type="submit" class="register">Create an account</button>      
-            <p class="sign-in">already have an account? <a href="login.html">Sign in</a></p>
+            <p class="sign-in">Already have an account? <a href="login.html">Sign in</a></p>
         </form>
         
     </div>

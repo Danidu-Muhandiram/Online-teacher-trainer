@@ -52,11 +52,13 @@
             }
             echo "</div>";
 
-            echo "<div class='add-course'>";
-                    echo "<a href='addcourse.php'>";
-                    echo "<img src='images/plus.png' alt= 'add image'>";
-                    echo "</a>";
-                    echo "</div>";
+            if($user == 'admin' || $user == 'trainer') {
+                echo "<div class='add-course'>";
+                echo "<a href='addcourse.php'>";
+                echo "<img src='images/plus.png' alt= 'add image'>";
+                echo "</a>";
+                echo "</div>";
+            }
         }
 
         
