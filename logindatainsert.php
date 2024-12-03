@@ -72,7 +72,7 @@ if ($result->num_rows > 0) {
             $_SESSION['user_id'] = $admin['admin_id'];
             $_SESSION['role'] = 'admin';
             echo "Welcome Admin, " . $admin['fname'];
-            header("Location: Admin.html"); // Handle admin login here (e.g., redirect to admin dashboard)
+            header("Location: Admin.php"); // Handle admin login here (e.g., redirect to admin dashboard)
             exit;
         }
 

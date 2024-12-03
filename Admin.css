@@ -24,8 +24,8 @@ body{
 body {
     margin: 0;
     padding: 0;
-    background-color:#f8dddd;
-    color: #282871;
+    background-color:#CABA9C;
+    color: whitesmoke;
     font-family: "Monsterrat", sans-serif;
 }
 
@@ -62,7 +62,7 @@ body {
 #sidebar {
     grid-area: sidebar;
     height: 100%;
-    background-color: #efa8a8;
+    background-color: #664537;
     overflow-y:auto;
     transition: all 0.5s;
     -webkit-transition:all 0.5s;
@@ -177,19 +177,19 @@ body {
 }
 
 .card:first-child {
-    background-color: #e79c9c;
+    background-color: #664537;
 }
 
 .card:nth-child(2) {
-    background-color: #e79c9c;
+    background-color: #664537;
 }
 
 .card:nth-child(3) {
-    background-color: #e79c9c;
+    background-color: #664537;
 }
 
 .card:nth-child(4) {
-    background-color: #e79c9c;
+    background-color: #664537;
 }
 
 .card-inner{
@@ -222,7 +222,7 @@ body {
 }
 
 .card.purple {
-    background-color: #f2baba;
+    background-color: #664537;;
     width: 100%; /* Make the new card take a bit more space */
 
 }
