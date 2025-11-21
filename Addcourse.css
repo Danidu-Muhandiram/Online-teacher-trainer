@@ -1,0 +1,40 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(danidu_src/backgroundv2.png);
+}
+
+.container h3 {
+    font-size: 20px;
+    text-align: center;
+}
+
+input, textarea {
+    width: 400px;
+    height: 3px;
+    padding: 20px;
+    margin-bottom: 8px;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 200px;
+}
+
+button {
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(40, 40, 233);
+    border-radius: 3px;
+}
+
+button:hover {
+    transform: scale(1.02);
+}

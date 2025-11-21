@@ -1,0 +1,171 @@
+/* General Styles */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
+}
+
+/* About Us Section Styles */
+.about-us-section {
+    padding: 20px;
+    background-color: #e6f0f0;
+    text-align: center;
+    margin-top: 80px; /* Added margin to avoid overlap */
+}
+
+.about-us-section .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.about-us-section .content img {
+    width: 700px;
+    height: 400px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.about-us-section .content p {
+    max-width: 500px;
+    font-size: 30px;
+}
+
+/* Vision and Mission */
+.about-us-section .info {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    gap: 20px;
+}
+
+.about-us-section .info div {
+    background-color: #729590;
+    padding: 90px;
+    border-radius: 8px;
+    width: 500px;
+    transition: transform 0.3s;
+}
+
+.about-us-section .info div:hover {
+    transform: scale(1.05);
+}
+
+/* Staff Members */
+.about-us-section .staff-members {
+    margin: 80px 0;
+}
+
+.about-us-section .staff-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.about-us-section .staff-list .staff img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}
+
+.about-us-section .staff-list .staff p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #152153;
+}
+
+/* Footer CSS */
+.container {
+    width: 100%;
+    background-color: #111a41;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer_columns ul a {
+    text-decoration: none;
+    color: white;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.footer_columns ul li {
+    padding: 2px;
+    list-style-type: none;
+}
+
+.footer_section {
+    background-color: #152153;
+    padding: 10px 10px 10px 10px;
+}
+
+.footer_columns {
+    width: 225px;
+    padding: 25px;
+}
+
+.footer_columns h4 {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.footer_columns p {
+    color: white;
+    font-size: 15px;
+}
+
+.footer_columns img {
+    width: 100px;
+    padding-bottom: 20px;
+}
+
+/* Adding Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateX(-100%); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Apply animation to the content */
+.about-us-section .content img, .about-us-section .content p {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.about-us-section .info div {
+    animation: slideIn 2s ease-in-out;
+}
+
+.nav_buttons button:hover {
+    background-color: #152153;
+    color: white;
+    transition: background-color 0.5s ease;
+}
+
+.fixed-img {
+    transition: transform 0.5s ease;
+}
+
+.fixed-img:hover {
+    transform: scale(1.05);
+}
+

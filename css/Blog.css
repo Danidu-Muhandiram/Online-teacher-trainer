@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #010101;
+    color: #eee;
+}
+
+/* Slider Styles */
+.slider {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider .list {
+    position: relative;
+    height: 100%;
+}
+
+.slider .list .item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: none; /* Initially hide all slides */
+}
+
+.slider .list .item.active {
+    display: block;
+    opacity: 1;
+    z-index: 10;
+}
+
+.slider .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider .list .item::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(to top, #000 10%, transparent);
+}
+
+/* Updated Description Styles */
+.slider .list .description {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    color: #fff;
+    z-index: 2;
+    text-align: left;
+    max-width: 50%;
+}
+
+.slider .list .description h2 {
+    font-size: 64px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.slider .list .description p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Arrows for Slider Navigation */
+.arrows {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    z-index: 100;
+    transform: translateY(-50%);
+}
+
+.arrows button {
+    background-color: rgba(238, 238, 238, 0.5);
+    border: none;
+    font-family: monospace;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: x-large;
+    color: #eee;
+    transition: 0.5s;
+}
+
+.arrows button:hover {
+    background-color: #eee;
+    color: black;
+}
+
+/* Updated Thumbnail Styles */
+.thumbnail {
+    position: absolute;
+    bottom: 40px;
+    z-index: 11;
+    display: flex;
+    gap: 20px; /* Adjusted gap for more spacing */
+    width: 100%;
+    height: 250px; /* Increased height for larger thumbnails */
+    padding: 0 50px;
+    box-sizing: border-box;
+    justify-content: center; /* Center the thumbnails */
+}
+
+.thumbnail .item {
+    width: 180px; /* Increased width */
+    height: 220px; /* Increased height */
+    filter: brightness(0.5);
+    transition: 0.5s;
+    flex-shrink: 0;
+}
+
+.thumbnail .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.thumbnail .item.active {
+    filter: brightness(1.5);
+}
+
+/* Media Queries */
+@media screen and (max-width: 678px) {
+    .thumbnail {
+        justify-content: start;
+    }
+    .slider .list .description h2 {
+        font-size: 32px;
+    }
+    .slider .list .description p {
+        font-size: 14px;
+    }
+    .arrows {
+        top: 10%;
+    }
+}
