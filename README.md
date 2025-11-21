@@ -269,3 +269,17 @@ Start-Process "http://localhost:8000/home.php"
 - Validate and sanitize all user inputs
 - Follow consistent naming conventions
 - Add proper error handling and logging
+
+## 📄 License
+
+This project is licensed under the MIT License. Feel free to use, modify, and distribute as needed.
+
+---
+
+<div align="center">
+
+**⭐ Don't forget to star this repository if you found it helpful! ⭐**
+
+
+</div>
+
