@@ -13,46 +13,58 @@ That's it! The application is ready to use with sample data included.
 
 ## 📸 Project Screenshots
 
+### 🏠 Home Page & Main Interface
+
+<div style="display: flex; gap: 10px;">
+
+  <img src="images/ss1.jpg" alt="Home Page" width="48%" />
+  <img src="images/ss2.jpg" alt="Main Interface" width="48%" />
+
+</div>
+
 <details>
-<summary>🏠 Home Page & Main Interface</summary>
+<summary>👨‍🏫 Login and Offer Management (Click Here) </summary>
 
-![Home Page](images/ss1.jpg)
-*Landing page with course overview and navigation*
+<div style="display: flex; gap: 10px; margin-top: 10px;">
+  <img src="images/ss3.jpg" alt="Course Catalog" width="48%" />
+  <img src="images/ss4.jpg" alt="Course Details" width="48%" />
+</div>
 
-![Main Interface](images/ss2.jpg)
-*User-friendly interface design*
+</details>
+
+
+<details>
+<summary>👨‍💼 Contact & Teacher course enrollment (Click Here)</summary>
+
+<div style="display: flex; gap: 10px; margin-top: 10px;">
+  <img src="images/ss5.jpg" alt="Admin Dashboard" width="48%" />
+  <img src="images/ss6.jpg" alt="Trainer Features" width="48%" />
+</div>
+
+</details>
+
+
+<details>
+<summary>🎓 Teacher Trainer content management (Click Here)</summary>
+
+<img src="images/ss7.jpg" alt="Student Dashboard" width="100%" style="margin-top: 10px;" />
 
 </details>
 
 <details>
-<summary>👨‍🏫 Course Management</summary>
+<summary>Teacher/ User Dashboard & Teacher Trainer Dashboard</summary>
 
-![Course Catalog](images/ss3.jpg)
-*Course browsing and selection interface*
 
-![Course Details](images/ss4.jpg)
-*Detailed course information and enrollment*
 
 </details>
 
 <details>
-<summary>👨‍💼 Admin & Trainer Dashboard</summary>
+<summary>Payement Management & Admin Dashboard</summary>
 
-![Admin Dashboard](images/ss5.jpg)
-*Administrative control panel*
 
-![Trainer Features](images/ss6.jpg)
-*Trainer management and course creation*
 
 </details>
 
-<details>
-<summary>🎓 Student Features & More</summary>
-
-![Student Dashboard](images/ss7.jpg)
-*Student learning interface and progress tracking*
-
-</details>
 
 ## 🚀 Overview
 
@@ -72,7 +84,7 @@ TeachConnect is a multi-role educational platform that connects administrators, 
 **Database Name**: `online_teacher_trainer`
 
 #### Core Tables:
-- **`trainer`** / **`trainer2`**: Trainer profiles and credentials
+- **`trainer`**: Trainer profiles and credentials
 - **`teacher`**: Student/teacher user accounts  
 - **`admin`**: Administrator accounts
 - **`courses`**: Course catalog and metadata
@@ -86,40 +98,6 @@ trainer (1) -> (*) courses (via trainer_id)
 courses (1) -> (*) enrollments
 blog_post (*) -> (1) admin/trainer (author)
 feedback (*) -> (1) teacher/trainer (reviewer)
-```
-
-### File Structure
-```
-├── /                          # Root directory (entry points)
-│   ├── home.php              # Landing page
-│   ├── login.php             # Authentication
-│   ├── register.php          # User registration
-│   ├── dashboard.php         # User dashboard
-│   ├── Course.php            # Course catalog
-│   ├── Blog.php              # Blog listing
-│   ├── Admin.php             # Admin panel
-│   ├── payment.php           # Payment processing
-│   ├── feedback.php          # Feedback system
-│   ├── contact_us.php        # Contact form
-│   └── FAQ.php               # FAQ page
-│
-├── /css/                     # Main stylesheets
-├── /danidu_css/              # Custom CSS modules
-├── /js/ & /danidu_js/        # JavaScript functionality
-├── /images/ & /danidu_src/   # Media assets
-├── /uploads/                 # User-uploaded content
-├── /Trainer_New/             # Trainer-specific modules
-│   ├── dashboard.php         # Trainer dashboard
-│   ├── register.php          # Trainer registration
-│   └── login.php             # Trainer authentication
-│
-├── /danidu_crud_php/         # CRUD operations
-│   ├── insert.php            # Data insertion
-│   ├── update.php            # Data updates
-│   ├── delete.php            # Data deletion
-│   └── display.php           # Data retrieval
-│
-└── /html/                    # Static HTML pages
 ```
 
 ## 🛠️ Technical Stack
@@ -211,7 +189,7 @@ if ($conn->connect_error) {
 ### 3. Local Development
 ```powershell
 # Navigate to project directory
-Set-Location -LiteralPath 'C:\GITHUB PROJECTS\Y1S2-IWT Project'
+Set-Location -LiteralPath 'C:\GITHUB PROJECTS'
 
 # Import database (first time setup)
 mysql -u root -p < online_teacher_trainer.sql
@@ -264,38 +242,6 @@ Start-Process "http://localhost:8000/home.php"
 4. **Password Security**: Uses `password_hash()` ✅
 5. **Session Security**: Implement HTTPS in production
 
-## 🌐 API Endpoints & Routes
-
-### Authentication
-- `POST /login.php` - User authentication
-- `POST /register.php` - User registration  
-- `GET /logout.php` - Session termination
-
-### User Management
-- `GET /dashboard.php` - User dashboard
-- `POST /update_profile.php` - Profile updates
-- `POST /delete_account.php` - Account deletion
-
-### Course Management
-- `GET /Course.php` - Course catalog
-- `POST /insertcourse.php` - Create course (trainer/admin)
-- `POST /update.php` - Update course (trainer/admin)
-- `POST /delete.php` - Delete course (trainer/admin)
-
-### Content Management
-- `GET /Blog.php` - Blog listing
-- `POST /add-update-blog.php` - Blog CRUD operations
-- `POST /delete_blog.php` - Blog deletion
-
-### Feedback System
-- `GET /feedback.php` - Feedback display
-- `POST /create_feedback.php` - Submit feedback
-- `GET /view_feedback.php` - Admin feedback management
-
-### Payment & Enrollment
-- `GET /payment.php` - Payment interface
-- `POST /payment_successful.html` - Payment confirmation
-
 ## 🎯 User Roles & Permissions
 
 ### Admin (`admin` table)
@@ -318,90 +264,8 @@ Start-Process "http://localhost:8000/home.php"
 - ✅ Profile management
 - 📊 Dashboard: `student_dashboard.html`
 
-## 🧪 Testing
-
-### Manual Testing Checklist
-```powershell
-# Test user registration
-curl -X POST "http://localhost:8000/register.php" -d "fname=Test&lname=User&email=test@example.com&password=test123"
-
-# Test course creation
-# (Login as trainer first, then access course creation)
-
-# Test feedback submission
-curl -X POST "http://localhost:8000/create_feedback.php" -d "name=Test&email=test@example.com&feedback=Great platform&rating=5"
-```
-
-### Database Testing
-```sql
--- Verify user creation
-SELECT * FROM trainer WHERE email = 'test@example.com';
-
--- Check course enrollment
-SELECT c.title, t.fname, t.lname FROM courses c 
-JOIN trainer t ON c.trainer_id = t.trainer_id;
-
--- Review feedback
-SELECT * FROM feedback ORDER BY created_at DESC;
-```
-
-## 📈 Performance Considerations
-
-### Database Optimization
-- Add indexes on frequently queried columns:
-  ```sql
-  ALTER TABLE trainer ADD INDEX idx_email (email);
-  ALTER TABLE courses ADD INDEX idx_trainer (trainer_id);
-  ALTER TABLE feedback ADD INDEX idx_created (created_at);
-  ```
-
-### File Structure Improvements
-- **Consolidate asset folders**: Merge `css/` + `danidu_css/`, `js/` + `danidu_js/`
-- **Implement autoloading**: For PHP classes and includes
-- **Add caching**: For database queries and static content
-
-## 🚀 Deployment Guide
-
-### Production Checklist
-- [ ] Environment variables configured
-- [ ] Database credentials secured
-- [ ] HTTPS enabled
-- [ ] File permissions set correctly
-- [ ] Error reporting disabled in production
-- [ ] Backup strategy implemented
-- [ ] Monitoring configured
-
-### Docker Deployment (Optional)
-```dockerfile
-FROM php:8.0-apache
-COPY . /var/www/html/
-RUN docker-php-ext-install mysqli
-EXPOSE 80
-```
-
-## 🤝 Contributing
-
-### Development Workflow
-1. **Create feature branch**: `git checkout -b feature/new-feature`
-2. **Follow coding standards**: PSR-12 for PHP
-3. **Test thoroughly**: Manual testing + database verification
-4. **Update documentation**: README and inline comments
-5. **Submit PR**: Target `Danidu-New` branch
-
 ### Code Standards
 - Use prepared statements for all database queries
 - Validate and sanitize all user inputs
 - Follow consistent naming conventions
 - Add proper error handling and logging
-
-## 📄 License
-This project currently has no license. Consider adding MIT or Apache 2.0 for open-source distribution.
-
-## 📞 Support
-- **Contact Form**: Built into the application (`contact_us.php`)
-- **FAQ**: Available at `/FAQ.php`
-- **Issues**: Use GitHub Issues for bug reports
-
----
-
-**⚠️ Security Notice**: This application contains hardcoded database credentials. Ensure proper environment configuration before production deployment.
