@@ -1,0 +1,39 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and temp files
+*.log
+tmp/
+temp/
+
+# PHP / Composer
+/vendor/
+composer.lock
+
+# Environment / secrets
+.env
+.env.local
+/.env
+
+# Node
+node_modules/
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Build artifacts
+dist/
+build/
+
+# Uploaded files (consider excluding or keeping depending on your needs)
+/uploads/
+
+# Misc
+*.tmp
+
+# Ignore local copies of config that may contain credentials
+config.php
+conn.php
